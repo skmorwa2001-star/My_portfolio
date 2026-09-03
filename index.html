@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Sunil Kumar, Artificial Intelligence student and aspiring ML engineer." />
+  <title>Sunil Kumar | AI & ML Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Sunil Kumar home">
+        <span class="brand-mark">SK</span>
+        <span>Sunil Kumar</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
+      </nav>
+    </header>
+    <nav class="page-progress" aria-label="Page sections">
+      <a class="progress-dot is-active" href="#about" aria-label="About me"></a>
+      <a class="progress-dot" href="#skills" aria-label="My toolkit"></a>
+      <a class="progress-dot" href="#work" aria-label="Selected work"></a>
+      <a class="progress-dot" href="#contact" aria-label="Contact"></a>
+    </nav>
+
+    <main id="top">
+      <section class="hero section-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> AI &amp; Data Enthusiast</p>
+          <h1>Turning raw data into <em>clear ideas.</em></h1>
+          <p class="hero-intro">I’m Sunil Kumar, an Artificial Intelligence student who enjoys finding patterns, building models, and creating thoughtful digital experiences.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore my work <span>↗</span></a>
+            <a class="text-link" href="#contact">Get in touch <span>→</span></a>
+          </div>
+          <div class="hero-meta">
+            <span>Based in Jaipur, India</span>
+            <span class="meta-line"></span>
+            <span>Open to opportunities</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Decorative data visualization">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="visual-card">
+            <div class="card-top"><span>MODEL_OUTPUT</span><span class="pulse"></span></div>
+            <div class="chart">
+              <span class="chart-label label-one">0.92</span>
+              <svg viewBox="0 0 420 180" role="img" aria-label="Rising model accuracy chart">
+                <defs>
+                  <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#ff7a59" stop-opacity=".32" />
+                    <stop offset="100%" stop-color="#ff7a59" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path class="grid-line" d="M0 30H420M0 75H420M0 120H420M0 165H420" />
+                <path class="area" d="M0 150 C45 142, 65 128, 102 135 S155 110, 190 118 S245 72, 278 92 S320 45, 355 60 S390 23, 420 28 V180 H0Z" />
+                <path class="chart-line" d="M0 150 C45 142, 65 128, 102 135 S155 110, 190 118 S245 72, 278 92 S320 45, 355 60 S390 23, 420 28" />
+                <circle class="chart-point" cx="420" cy="28" r="5" />
+              </svg>
+              <div class="chart-axis"><span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span></div>
+            </div>
+            <div class="card-bottom"><span>accuracy</span><strong>92.4%</strong><span class="positive">+12.8%</span></div>
+          </div>
+          <div class="floating-tag tag-python"><span>◎</span> Python</div>
+          <div class="floating-tag tag-ml"><span>✦</span> ML / EDA</div>
+        </div>
+      </section>
+
+      <section class="about section-grid" id="about">
+        <div class="section-label"><span>01</span><span class="label-line"></span><span>About me</span></div>
+        <div class="about-content">
+          <div class="about-heading"><h2>Curious by nature.<br /><span>Analytical by craft.</span></h2><div class="profile-photo"><img src="sunil-kumar.png" alt="Portrait of Sunil Kumar" /></div></div>
+          <div class="about-columns">
+            <p>I’m pursuing a B.Tech in Artificial Intelligence at Government Engineering College, Jaipur. My work sits at the intersection of strong fundamentals and practical problem-solving.</p>
+            <p>From cleaning untidy datasets to training models and communicating insights visually, I like taking complex questions and making them easier to understand.</p>
+          </div>
+          <div class="education-note"><span class="note-icon">↳</span><span><strong>Currently studying</strong><br />B.Tech in Artificial Intelligence · Government Engineering College, Jaipur</span></div>
+        </div>
+      </section>
+
+      <section class="skills section-grid" id="skills">
+        <div class="section-label"><span>02</span><span class="label-line"></span><span>My toolkit</span></div>
+        <div class="skills-content">
+          <div class="skills-heading"><h2>Tools I use to<br /><span>make things happen.</span></h2><p>Always learning, always experimenting.</p></div>
+          <div class="skill-list">
+            <div class="skill-row"><span class="skill-number">01</span><span class="skill-name">Programming</span><span class="skill-items">C / C++ <b>·</b> Python</span><span class="skill-arrow">↗</span></div>
+            <div class="skill-row"><span class="skill-number">02</span><span class="skill-name">Data analysis</span><span class="skill-items">Pandas <b>·</b> NumPy <b>·</b> EDA</span><span class="skill-arrow">↗</span></div>
+            <div class="skill-row"><span class="skill-number">03</span><span class="skill-name">Visualization</span><span class="skill-items">Matplotlib <b>·</b> Seaborn</span><span class="skill-arrow">↗</span></div>
+            <div class="skill-row"><span class="skill-number">04</span><span class="skill-name">Machine learning</span><span class="skill-items">Data cleaning <b>·</b> Model training</span><span class="skill-arrow">↗</span></div>
+            <div class="skill-row"><span class="skill-number">05</span><span class="skill-name">Web foundations</span><span class="skill-items">HTML <b>·</b> CSS</span><span class="skill-arrow">↗</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work section-grid" id="work">
+        <div class="section-label"><span>03</span><span class="label-line"></span><span>Selected work</span></div>
+        <div class="work-content">
+          <div class="work-heading"><h2>Ideas made <em>visible.</em></h2><p>Practical projects built around data, prediction, and clear communication.</p></div>
+          <div class="project-grid">
+            <article class="project-card project-orange"><div class="project-visual visual-dataset"><span class="data-dot dot-a"></span><span class="data-dot dot-b"></span><span class="data-dot dot-c"></span><span class="data-dot dot-d"></span><span class="data-axis"></span></div><div class="project-info"><div><span class="project-type">01 / EDA · Visualization</span><h3>Jaipur air quality explorer</h3><p>Clean and explore pollution data to reveal seasonal patterns through intuitive charts.</p><span class="project-tech">Python · Pandas · Seaborn</span></div><span class="project-link">↗</span></div></article>
+            <article class="project-card project-dark"><div class="project-visual visual-model"><div class="model-ring"></div><span class="model-node node-one"></span><span class="model-node node-two"></span><span class="model-node node-three"></span><span class="model-node node-four"></span></div><div class="project-info"><div><span class="project-type">02 / Machine learning</span><h3>Student performance predictor</h3><p>Prepare academic data and train a model to identify factors linked to student outcomes.</p><span class="project-tech">Python · NumPy · Model training</span></div><span class="project-link">↗</span></div></article>
+            <article class="project-card project-lilac"><div class="project-visual visual-dashboard"><div class="dash-bar bar-one"></div><div class="dash-bar bar-two"></div><div class="dash-bar bar-three"></div><div class="dash-bar bar-four"></div><span class="dash-pill">INSIGHT</span></div><div class="project-info"><div><span class="project-type">03 / Data cleaning · Dashboard</span><h3>Retail sales insights</h3><p>Transform messy sales records into a focused visual summary for better decisions.</p><span class="project-tech">Pandas · Matplotlib · HTML / CSS</span></div><span class="project-link">↗</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section-grid" id="contact">
+        <div class="section-label"><span>04</span><span class="label-line"></span><span>Contact</span></div>
+        <div class="contact-content"><p class="eyebrow"><span class="eyebrow-dot"></span> Have a question or an idea?</p><h2>Let’s make something<br /><em>meaningful.</em></h2><form class="contact-form" action="https://formsubmit.co/sklohmarod2001@gmail.com" method="POST"><input type="hidden" name="_subject" value="New portfolio message from Sunil Kumar's website" /><input type="hidden" name="_captcha" value="false" /><input type="hidden" name="_template" value="table" /><div class="form-row"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Sunil Kumar" required /></div><div class="form-row"><label for="email">Your email</label><input id="email" name="email" type="email" placeholder="you@example.com" required /></div><div class="form-row"><label for="message">Your message</label><textarea id="message" name="message" rows="4" placeholder="Tell me a little about your idea..." required></textarea></div><button class="button button-primary form-submit" type="submit">Send message <span>↗</span></button></form><div class="contact-socials"><a class="social-card" href="mailto:sklohmarod2001@gmail.com" aria-label="Email Sunil Kumar"><span class="social-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3v.2l9 5.4 9-5.4V8l-9 5.4L3 8Z"/></svg></span><span><strong>Email me</strong><small>sklohmarod2001@gmail.com</small></span><b>↗</b></a><a class="social-card" href="https://www.linkedin.com/in/sunil-kumar-s13k069?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Visit Sunil Kumar on LinkedIn"><span class="social-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0-4.12zM3.54 8.99H7.1v11.46H3.54V8.99z"/></svg></span><span><strong>Connect on LinkedIn</strong><small>sunil-kumar-s13k069</small></span><b>↗</b></a></div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© 2026 Sunil Kumar</span><span>Designed &amp; built with curiosity</span><div class="footer-links"><a class="linkedin-link" href="https://www.linkedin.com/in/sunil-kumar-s13k069?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Visit Sunil Kumar on LinkedIn"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM3.54 8.99H7.1v11.46H3.54V8.99z"/></svg><span>LinkedIn</span></a><a href="#top">Back to top ↑</a></div></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
