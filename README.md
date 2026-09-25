@@ -1,6 +1,6 @@
 # Sunil Kumar — AI & ML Portfolio
 
-> **B.Tech AI Student | Machine Learning | Data Analytics | Python**
+> **B.Tech AI Student | Machine Learning | NLP | Data Analytics | Python**
 
 Welcome to my personal portfolio repository. This website showcases my **technical skills, projects, learning journey, and experience in Artificial Intelligence and Machine Learning**.
 
@@ -11,7 +11,7 @@ Welcome to my personal portfolio repository. This website showcases my **technic
 
 ## About
 
-I am a **B.Tech Artificial Intelligence student** with a strong interest in **Machine Learning, Data Analytics, and software development**.
+I am a **B.Tech Artificial Intelligence student** with a strong interest in **Machine Learning, NLP, Data Analytics, and software development**.
 
 I enjoy working with data, developing machine learning solutions, and building practical projects that solve real-world problems.
 
@@ -105,6 +105,15 @@ A data analytics project designed to extract meaningful insights from retail sal
 
 ---
 
+### Movie Recommendation System
+
+- Built a content-based movie recommendation system using Python and Scikit-learn.
+- Recommends 5 similar movies based on the user's selected movie.
+- Used Pandas and NumPy for data preprocessing and feature handling.
+- Used Joblib to save and load pre-computed similarity data.
+- Developed and deployed an interactive Streamlit web application.
+- Tech: Python · Scikit-learn · Pandas · Joblib · Streamlit
+
 ## Learning Journey
 
 My current learning roadmap:
@@ -121,6 +130,8 @@ Exploratory Data Analysis
 Machine Learning
    ↓
 Advanced Machine Learning
+   ↓
+Natural Language Processing
    ↓
 Deep Learning
    ↓
