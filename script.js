@@ -1,32 +1,57 @@
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav-links");
+const siteHeader = document.querySelector(".site-header");
+const navCta = document.querySelector(".nav-cta");
 
+// Keep the mobile menu button state in sync with the visible navigation.
 menuButton.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("is-open");
   menuButton.setAttribute("aria-expanded", String(isOpen));
 });
 
-nav.querySelectorAll("a").forEach((link) => {
+const closeNavigation = () => {
+  nav.classList.remove("is-open");
+  menuButton.setAttribute("aria-expanded", "false");
+};
+
+// Close the menu after choosing any section link, including the contact call to action.
+[...nav.querySelectorAll("a"), navCta].forEach((link) => {
   link.addEventListener("click", () => {
-    nav.classList.remove("is-open");
-    menuButton.setAttribute("aria-expanded", "false");
+    closeNavigation();
   });
 });
 
-const progressDots = [...document.querySelectorAll(".progress-dot")];
-const trackedSections = ["about", "skills", "work", "contact"].map((id) => document.getElementById(id));
-const sectionObserver = new IntersectionObserver((entries) => {
-  const visibleSection = entries
-    .filter((entry) => entry.isIntersecting)
-    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-  if (!visibleSection) return;
-  const activeIndex = trackedSections.indexOf(visibleSection.target);
-  progressDots.forEach((dot, index) => dot.classList.toggle("is-active", index === activeIndex));
-}, { rootMargin: "-20% 0px -55% 0px", threshold: [0.1, 0.3, 0.6] });
+const updateHeaderOnScroll = () => {
+  siteHeader.classList.toggle("is-scrolled", window.scrollY > 20);
+};
 
-trackedSections.forEach((section) => sectionObserver.observe(section));
+// Toggle the compact, high-contrast header style after the page begins scrolling.
+window.addEventListener("scroll", updateHeaderOnScroll, { passive: true });
+updateHeaderOnScroll();
+
+const progressDots = [...document.querySelectorAll(".progress-dot")];
+const trackedSections = ["home", "about", "skills", "work", "contact"].map((id) => document.getElementById(id));
+
+// Highlight the section nearest the sticky header; ensure Contact activates at page end.
+const updateActiveProgressDot = () => {
+  const activationPoint = siteHeader.getBoundingClientRect().bottom + 24;
+  let activeIndex = trackedSections.reduce((currentIndex, section, index) => (
+    section.getBoundingClientRect().top <= activationPoint ? index : currentIndex
+  ), 0);
+
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+    activeIndex = trackedSections.length - 1;
+  }
+
+  progressDots.forEach((dot, index) => dot.classList.toggle("is-active", index === activeIndex));
+};
+
+window.addEventListener("scroll", updateActiveProgressDot, { passive: true });
+window.addEventListener("resize", updateActiveProgressDot);
+updateActiveProgressDot();
 
 const contactSocials = document.querySelector(".contact-socials");
+// Add the GitHub card alongside the social links already present in the contact section.
 const githubCard = document.createElement("a");
 githubCard.className = "social-card";
 githubCard.href = "https://github.com/skmorwa2001-star";

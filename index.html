@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Load page metadata, typography, and the shared stylesheet. -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Sunil Kumar, Artificial Intelligence student and aspiring ML engineer." />
   <title>Sunil Kumar | AI & ML Portfolio</title>
+  <link rel="icon" type="image/png" href="media/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Keep the header, section navigation, and portfolio content in one centered layout. -->
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Sunil Kumar home">
@@ -21,23 +24,27 @@
         <span></span><span></span>
       </button>
       <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#work">Work</a>
         <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
       </nav>
     </header>
+    <!-- These links correspond one-to-one with the sections tracked in script.js. -->
     <nav class="page-progress" aria-label="Page sections">
-      <a class="progress-dot is-active" href="#about" aria-label="About me"></a>
+      <a class="progress-dot is-active" href="#home" aria-label="AI &amp; Data Enthusiast"></a>
+      <a class="progress-dot" href="#about" aria-label="About me"></a>
       <a class="progress-dot" href="#skills" aria-label="My toolkit"></a>
       <a class="progress-dot" href="#work" aria-label="Selected work"></a>
       <a class="progress-dot" href="#contact" aria-label="Contact"></a>
     </nav>
 
     <main id="top">
-      <section class="hero section-grid">
+      <!-- Intro and decorative chart that introduce the portfolio. -->
+      <section class="hero section-grid" id="home">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> AI &amp; Data Enthusiast</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> AI &amp; ML Student | Python Developer</p>
           <h1>Turning raw data into <em>clear ideas.</em></h1>
           <p class="hero-intro">I’m Sunil Kumar, an Artificial Intelligence student who enjoys finding patterns, building models, and creating thoughtful digital experiences.</p>
           <div class="hero-actions">
@@ -78,10 +85,11 @@
         </div>
       </section>
 
+      <!-- Background, education, and skill summaries. -->
       <section class="about section-grid" id="about">
         <div class="section-label"><span>01</span><span class="label-line"></span><span>About me</span></div>
         <div class="about-content">
-          <div class="about-heading"><h2>Curious by nature.<br /><span>Analytical by craft.</span></h2><div class="profile-photo"><img src="sunil-kumar.png" alt="Portrait of Sunil Kumar" /></div></div>
+          <div class="about-heading"><h2>Curious by nature.<br /><span>Analytical by craft.</span></h2><div class="profile-photo"><img src="media\sunil-kumar.png" alt="Portrait of Sunil Kumar" /></div></div>
           <div class="about-columns">
             <p>I'm pursuing B.Tech in Artificial Intelligence from Government Engineering College, Jaipur. My area of operation includes both strong fundamentals and practical implementation in order to solve problems.</p>
             <p>My work involves everything from cleaning messy data to model training and visualization in order to help people make intelligent conclusions.</p>
@@ -105,6 +113,7 @@
         </div>
       </section>
 
+      <!-- Project cards link to live demos where available. -->
       <section class="work section-grid" id="work">
         <div class="section-label"><span>03</span><span class="label-line"></span><span>Selected work</span></div>
         <div class="work-content">
@@ -118,6 +127,7 @@
         </div>
       </section>
 
+      <!-- Contact form and social links for getting in touch. -->
       <section class="contact section-grid" id="contact">
         <div class="section-label"><span>04</span><span class="label-line"></span><span>Contact</span></div>
         <div class="contact-content"><p class="eyebrow"><span class="eyebrow-dot"></span> Have a question or an idea?</p><h2>Let's build something<br /><em>that matters.</em></h2><form class="contact-form" action="https://formsubmit.co/sklohmarod2001@gmail.com" method="POST"><input type="hidden" name="_subject" value="New portfolio message from Sunil Kumar's website" /><input type="hidden" name="_captcha" value="false" /><input type="hidden" name="_template" value="table" /><div class="form-row"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Sunil Kumar" required /></div><div class="form-row"><label for="email">Your email</label><input id="email" name="email" type="email" placeholder="you@example.com" required /></div><div class="form-row"><label for="message">Your message</label><textarea id="message" name="message" rows="4" placeholder="Tell me a little about your idea..." required></textarea></div><button class="button button-primary form-submit" type="submit">Send message <span>↗</span></button></form><div class="contact-socials"><a class="social-card" href="mailto:sklohmarod2001@gmail.com" aria-label="Email Sunil Kumar"><span class="social-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3v.2l9 5.4 9-5.4V8l-9 5.4L3 8Z"/></svg></span><span><strong>Email me</strong><small>sklohmarod2001@gmail.com</small></span><b>↗</b></a><a class="social-card" href="https://www.linkedin.com/in/sunil-kumar-s13k069?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Visit Sunil Kumar on LinkedIn"><span class="social-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0-4.12zM3.54 8.99H7.1v11.46H3.54V8.99z"/></svg></span><span><strong>Connect on LinkedIn</strong><small>sunil-kumar-s13k069</small></span><b>↗</b></a></div></div>
